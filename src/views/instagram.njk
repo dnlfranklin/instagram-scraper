@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Scraper | {{nickname}}</title>
+
+  <link rel ="stylesheet" href= "/files/assets/css/bootstrap.min.css" />
+</head>
+<body class="container-fluid">
+  <div class="row p-3">
+    <a href="/">Voltar</a>
+  </div>
+  <div class="row">
+    {% for img in instagram %}
+    <div class="col-lg-3 p-3">
+      <img src="{{ img.src }}" class="img-responsive" width="100%"/>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>

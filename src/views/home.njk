@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Scraper | Home</title>
+
+  <link rel ="stylesheet" href= "/files/assets/css/bootstrap.min.css" />
+</head>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+  <div>
+    <h1>Welcome to Instagram Scraper</h1>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search for instagram profile" aria-label="Search for instagram profile" aria-describedby="button-addon2" id="profile">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="submit" onclick="submit()">Go</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function submit() {
+      var profile = document.getElementById('profile');
+      if(!!profile.value) {
+        location.href = '/'+profile.value;
+      }
+      else{ 
+        alert('Profile is required');
+      }
+    }  
+  </script>
+
+</body>
+</html>

@@ -45,7 +45,10 @@ app.get('/:nickname', async function(req, res) {
     return res.render('404'); 
   }
 
-  return res.render('instagram', {instagram, nickname});
+  return res.render(instagram.length === 0 ? '404' : 'instagram', {
+    instagram, 
+    nickname
+  });
 });
 
 app.listen(port, () => {
